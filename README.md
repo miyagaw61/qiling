@@ -53,11 +53,20 @@ Qemu usermode does similar thing to our emulator, that is to emulate whole execu
 
 #### Install
 
-Run below command line to install Qiling (Python3 is required).
+If you are NOT using pyenv, run below command line to install Qiling (Python3 is required).
 
 ```
 python3 setup.py install
 ```
+
+If you are using pyenv, run the command shown below (or use docker).
+
+```
+mv $(dirname $(which python))/python2.7 $(dirname $(which python))/python2.7.bak
+pip install -r ./requirements.txt
+python setup.py install
+```
+
 
 ---
 
